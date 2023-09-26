@@ -14,20 +14,18 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true)
     next()
 })
-
+const DB = []
 socketIo.on("connection",(socket) => {
-	console.log("New client connected " + socket.id)
-  
+	console.log("Kết nối CLIENT thành công")
 	socket.on("ClientToServer",(data)=> {
+        console.log("Người dùng: ",data.name)
         console.log(data)
-        const dataServer = {
-            id:socket.id,
-            content: "server"
-        }
-		socketIo.emit("ServerToClient", { dataServer })
+        DB.push(data)
+        socketIo.emit("ServerToClient", DB)
 	})
 	socket.on("disconnect", () => {
-	  console.log("Client disconnected " + socket.id)
+	  console.log("Ngắt kết nối CLIENT")
+      console.log("<<----------------------------------------->>")
 	})
 })
 
