@@ -7,7 +7,8 @@ function App() {
   const socketRef = useRef()
   
   useEffect(() => {
-    socketRef.current = socketIOClient.connect("http://localhost:5000")
+    // 192.168.60.114:5000
+    socketRef.current = socketIOClient.connect("192.168.110.1:5000")
     return () => {
       socketRef.current.disconnect()
     }
@@ -46,7 +47,9 @@ function App() {
               ))}
             </div>
           <input value={input} onChange={(e)=>{setInput(e.target.value)}}/>
-          <div onClick={send}>GỬI</div>
+          <br/>
+          <br/>
+          <button onClick={send}>GỬI</button>
     </div>
   );
 }
