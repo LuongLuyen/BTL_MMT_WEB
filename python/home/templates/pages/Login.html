@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Phone.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class='app'>
+        <div class="phone">
+            <div class="phone__header">.</div>
+            <div class="phone__main">
+                <div>
+                    <div class='back'>X</div>
+                    <div class='name'>
+                        <i class="fas fa-university"></i>
+                        <span>AGRIBANK Mod tiền vô hạn</span>
+                    </div>
+                    <div class='name__screen'>
+                        Đăng nhập
+                    </div>
+                    <div>
+                        <input class='input' placeholder="Số điện thoại                           0**********9"/>
+                        <div class='vach'>.</div>
+                        <input class='input' placeholder="Mật khẩu"/>
+                        <div class='vach'>.</div>
+                    </div>
+                    <div class='xacthuc'>
+                        <div class='button'>Đăng nhập</div>
+                        <i class="fas fa-fingerprint vt"></i>
+                    </div>
+                    <div class='qmk'>
+                        Quên mật khẩu ?
+                    </div>
+                </div>
+                <div class='bottom'>
+                    <div>
+                        <i class="fas fa-share-alt-square icon"></i>
+                        <span>Chia sẻ</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-question-circle icon"></i>
+                        <span>Hỏi đáp</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone-alt icon"></i>
+                        <span>Liên hệ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="phone__footer"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

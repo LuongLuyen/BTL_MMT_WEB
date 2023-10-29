@@ -1,5 +1,6 @@
 import Home from './Home';
 import Login from './Login';
+import Transaction from './Transaction'
 import{
   BrowserRouter as Router,
   Routes,
@@ -9,8 +10,9 @@ function App() {
   return (
     <Router>
     <Routes>
-      <Route path='/home' element={<Home/>}/>
+      <Route path='/' element={<Home/>}/>
       <Route path='/login' element={<Login />}/>
+      <Route path='/transaction' element={<Transaction />}/>
     </Routes>
   </Router>
   );

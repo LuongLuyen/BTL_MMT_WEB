@@ -4,7 +4,6 @@ const http = require("http")
 const server = http.createServer(app)
 const socketIo = require("socket.io")(server, {cors: {origin: "*"}})
 const PORT = process.env.PORT || 5000
-const ip = require("ip")
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
@@ -34,5 +33,5 @@ app.get('/',(req,res)=>{
     res.send("<h1>Server BTL Mạng máy tính</h1>")
 })
 server.listen(PORT, ()=>{
-    console.log(`server is running ${ ip.address()}:${PORT}`)
+    console.log(`server is running PORT: ${PORT}`)
 })
