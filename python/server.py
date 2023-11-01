@@ -9,9 +9,7 @@ try:
         conn, addr = server.accept()
         data = conn.recv(1024)
         print(f"Data: {data.decode()}")
-        datas = "Hello, Client!"
-        conn.send(datas.encode())
         conn.close()
 except KeyboardInterrupt:
-    print("Ctrl+C detected. Server terminated.")
+    print("Ctrl+C Out")
 

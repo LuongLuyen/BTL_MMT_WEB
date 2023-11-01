@@ -14,8 +14,69 @@
         <div class="phone">
             <div class="phone__header">.</div>
             <div class="phone__main">
-                <div class="home__header">header</div>
-                <div>main</div>
+                <div class="ke"></div>
+                <div class="home__header">
+                    <form method="post"  action="{% url 'home:login' %}">
+                        {% csrf_token %}
+                        <input type="hidden" id="data" name="logout" value="logout" required>
+                        <button style=" border: none; background: none; color: #fff;" type="submit">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </form>
+                    <div>CK NHANH QUA SỐ TK</div>
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div>
+                    <div class="dem">.</div>
+                    <div class="account">
+                        <div class="home__account1">
+                            <span><i class="fas fa-wallet ww"></i></span>
+                            Tài khoản nguồn
+                        </div>
+                        <div class="home__account2">{{name}}: {{card.stk}}</div>
+                        <div class='vach'></div>
+                        <div class="wallet">
+                            <div>Số dư</div>
+                            <div>{{card.sd}} VND</div>
+                        </div>
+                    </div>
+                    <div class="dem">.</div>
+                    <form method="post"  action="{% url 'home:home' %}">
+                        {% csrf_token %}
+                            <div class="transaction">
+                                <div class="giaodich">
+                                    <i class="fas fa-user" style="color: rgb(250, 99, 17);margin-right: 10px;"></i>
+                                    Thông tin thụ hưởng
+                                </div>
+                                <div>
+                                    <div class="giaodich">
+                                        Ngân hàng thụ hưởng
+                                    </div>
+                                    <select class="giaodich tennh" name="bank" id="bank">
+                                        <option value="Agribank">Agribank</option>
+                                        <option value="Vietcombank">Vietcombank</option>
+                                    </select>
+                                    <div class="giaodich">Số tài khoản</div>
+                                    <div class="giaodich">
+                                        <input name="stkn" placeholder="999999999999"/>
+                                    </div>
+                                    <div class='vach'></div>   
+                                    <div class="giaodich"><input name="ck" placeholder="Số tiền                                                VND"/></div>
+                                    <div class='vach'></div>
+                                    <div class="giaodich">Nội dung chuyển khoản</div>
+                                    <div class="giaodich">
+                                        <input name="ndck" placeholder="{{name}} + chuyển khoản"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dem">.</div>
+                            <div class="action">
+                                <div class="huy">Hủy</div>
+                                <button type="submit" class="tieptuc">Tiếp tục</button>
+                            </div>
+                    </form>
+
+                </div>
             </div>
             <div class="phone__footer"></div>
         </div>
