@@ -1,3 +1,4 @@
+
 Insert into home_user(userName,password) values('NguyenVanA','123');
 Insert into home_user(userName,password) values('NguyenVanB','123');
 
