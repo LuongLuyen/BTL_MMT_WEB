@@ -29,7 +29,7 @@ def getHome(request):
                 tkNhan.save()
                 card = Card.objects.get(userid=idUser)
                 card.sd = '{:,}'.format(int(card.sd)).replace(',', '.')
-                text = stkn+" + "+ck+" + "+ndck
+                text = " Tk huong thu: "+stkn+" + So tien: "+ck+" + noi dung: "+ndck
                 encoded_text = text.encode("utf-8")
                 data = bytes(encoded_text)
                 sendSocket(data)
